@@ -42,7 +42,7 @@ async function getData() {
     if (matchingData) {
        leftPanel.innerHTML = `
                     <div class="name">👤..... ${matchingData.full_name}.....</div>
-                    <div class="email">📫 ${matchingData.email}</div>
+                    <div class="email">Email 📫 ${matchingData.email}</div>
                     <div class="phone">📞 ${matchingData.phone}</div>
                     <div class="trailerType">🚛 ${matchingData.trailer_type}</div>
                     <div class="max-weight">⚖️ ${matchingData.max_weight}</div>
