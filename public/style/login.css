@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background:  #141720;
+    color: white;
+}
+
+/* Center wrapper */
+.auth-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card */
+.auth-box {
+    width: 360px;
+    background: #1c2541;
+    padding: 25px;
+    border-radius: 12px;
+    border-top: 4px solid #ff9f1c;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.auth-box h1 {
+    text-align: center;
+    margin-bottom: 5px;
+    color: #ff9f1c;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    margin-bottom: 20px;
+}
+
+/* Toggle */
+.toggle {
+    display: flex;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #3a506b;
+}
+
+.toggle button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background: #0b132b;
+    color: white;
+    font-weight: bold;
+}
+
+.toggle button.active {
+    background: #ff9f1c;
+    color: black;
+}
+
+/* Forms */
+.form {
+    display: none;
+}
+
+.form.active {
+    display: block;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 0.85rem;
+    color: #cbd5e1;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #3a506b;
+    background: #0b132b;
+    color: white;
+    outline: none;
+}
+
+input:focus {
+    border-color: #ff9f1c;
+}
+
+/* Button */
+.primary-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background: #ff9f1c;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+}
+
+.primary-btn:hover {
+    background: #f59e0b;
+}

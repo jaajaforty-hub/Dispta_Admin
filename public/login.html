@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fortunate Logistics - Login</title>
+    <link rel="stylesheet" href="style/login.css">
+</head>
+
+<body>
+
+<div class="auth-container">
+
+    <div class="auth-box">
+
+        <h1>🚛 Fortunate Logistics</h1>
+        <p class="subtitle">Login or create an account to continue</p>
+
+        <!-- Toggle Buttons -->
+        <div class="toggle">
+            <button id="loginBtn" class="active">Login</button>
+            <button id="registerBtn">Register</button>
+        </div>
+
+        <!-- LOGIN FORM -->
+        <form action="/login" id="loginForm" class="form active"  method="POST">
+            <label for="email">Email</label>
+            <input type="email" placeholder="Enter email" required name="email" id="email">
+
+            <label for="password">Password</label>
+            <input type="password" placeholder="Enter password" required name="password" id="password">
+
+            <button type="submit" class="primary-btn">Login</button>
+        </form>
+
+        <!-- REGISTER FORM -->
+        <form id="registerForm" class="form">
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter full name" required>
+
+            <label>Email</label>
+            <input type="email" placeholder="Enter email" required>
+
+            <label>Registration Code</label>
+            <input type="text" placeholder="Enter registration code" required>
+
+            <label>Password</label>
+            <input type="password" placeholder="Create password" required>
+
+            <button type="submit" class="primary-btn">Register</button>
+        </form>
+
+    </div>
+
+</div>
+
+<script>
+    const loginBtn = document.getElementById("loginBtn");
+    const registerBtn = document.getElementById("registerBtn");
+    const loginForm = document.getElementById("loginForm");
+    const registerForm = document.getElementById("registerForm");
+
+    loginBtn.onclick = () => {
+        loginBtn.classList.add("active");
+        registerBtn.classList.remove("active");
+        loginForm.classList.add("active");
+        registerForm.classList.remove("active");
+    };
+
+    registerBtn.onclick = () => {
+        registerBtn.classList.add("active");
+        loginBtn.classList.remove("active");
+        registerForm.classList.add("active");
+        loginForm.classList.remove("active");
+    };
+</script>
+
+<script src="app.js"></script>
+
+</body>
+</html>
