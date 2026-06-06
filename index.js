@@ -71,7 +71,7 @@ function auth(req,res,next){
 
 app.get("/api/data", auth, async (req, res) => {
     try {
-        const result = await db.query("SELECT * FROM carriers");
+        const result = await pool.query("SELECT * FROM carriers");
         res.json(result.rows);   
     } catch (err) {
         console.error(err);
