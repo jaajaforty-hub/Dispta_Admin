@@ -1,8 +1,8 @@
 import express from 'express';
-import pg from 'pg';
 import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
 import jwt from "jsonwebtoken"
+import {Pool} from "pg"
 
 dotenv.config();
 
@@ -12,14 +12,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(cookieParser())
 
-const db = new pg.Pool({
-    host: process.env.DB_HOST,
-    port: process.env.DB_PORT,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: { rejectUnauthorized: false }
 });
-
 
 
 app.post("/login",(req,res)=>{
